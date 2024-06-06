@@ -18,9 +18,9 @@
 > User Profile: Users can view and update their profile information.
 > Admin Panel: Administrators have access to additional functionalities like adding, updating, and removing products, managing orders, and user accounts.
 
-#Installation
+# Installation
 > Clone the repository:
-     git clone https://github.com/your-username/e-commerce.git
+     git clone https://github.com/Rounak-kc/E-commerce-website.git
 > Import the project into your preferred IDE (Eclipse, IntelliJ IDEA, etc.).
 > Set up a MySQL database and import the provided SQL file to create the necessary tables.
 > Configure the database connection in the config.properties file.
