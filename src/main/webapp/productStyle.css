@@ -1,0 +1,884 @@
+@charset "ISO-8859-1";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+	background:#ffffff;
+}
+
+.uu{
+    height:1000px
+}
+/*///////////////////////////////////////Navigation CSS//////////////////////////////////////////////////////////*/
+/* Main Navigation block */
+.nav_main_container{
+	/* border: 2px red solid;  */
+	width:100%;
+	height:auto;
+	position:fixed;
+    top: 0;
+	z-index:2;
+}
+
+/*Contain header message for user*/
+.msg{
+	/*position:fixed;*/
+    width: 100%;
+    background-color:#FFCC00;
+    color: red;
+}
+
+/*Contain all navigation bar element*/
+.nav_Container{
+    padding: 0;
+    /*border: 2px red solid;*/
+    position:absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    /* background-color: transparent; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*Contain Main logo */
+.main_logo{
+    /* border:2px red solid; */
+    position:relative;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;  
+    height: 80px;
+    /* overflow: hidden; */
+}
+.main_logo img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+/*Static navigation list*/
+.nav_list_container{
+    /* border:2px yellow solid;  */
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.nav_list{
+    box-sizing: border-box;
+    /* border:2px red solid; */
+    right: 110px; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    list-style: none;
+    width: 90%;
+    height: 80px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Contain burger option for navigation bar list*/
+.ham_burger{
+    box-sizing: border-box;
+    /* border:1px black solid; */
+    width:10%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layer{
+    /* border:1px black solid; */
+    width: 40px;
+    height:6px;
+    margin: 2px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.nav_list li{
+    padding: 5px;
+    margin:2px;
+    /* border: 1px black solid; */
+    width: auto;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_list li:hover{
+    transform: scale(1.1);
+}
+
+.nav_list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_list li a:hover{
+    color:rgb(18, 158, 111);
+}
+
+/*Contain all search box elements*/
+.search_container{
+    /* border:2px red solid; */
+    box-sizing: border-box;
+    width: 25%; 
+    height: 80px; 
+    background-color: #ffffff; 
+}
+.search_box{
+    box-sizing: border-box;
+    border: 1px rgb(73, 68, 68) solid;
+    border-radius: 10px;
+    width: 90%; 
+    height: 45px;
+}
+.search_box input{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #ffffff;
+
+}
+.search_box button{
+    margin: 5px;
+    width: 9%;
+    height: 80%;
+    border-radius: 50%;
+    border: 0;
+    background-color: transparent;
+}
+
+/*Contain User profile,logout button and signIn/signUp element */
+.User_Container{
+    box-sizing: border-box;
+    width: 15%;
+    height: 80px;
+}
+
+.User_Container button{
+	border-radius:50%;
+	background: transparent;
+}
+/*Profile image*/
+.avatar{
+    display: flex;
+    width: 50px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////Login PopUp Pages CSS//////////////////////////////////////////////////////////*/
+/*Login Page*/
+.login_Page{
+    margin-left: 35%;
+    padding: 10px;
+    position: fixed;
+    top:-260px;
+    width: 400px;
+    height: auto;
+    background:#ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    z-index: 2;
+}
+.show_login_Page{
+    top:100px;
+    display: block;
+}
+
+.login_Page form{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_Page form h2{
+    margin: auto;
+}
+
+.input_field{
+    /*border: 1px black solid;*/
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input_field input{
+    width: 280px;
+    height: 35px;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+.check_field{
+    /* border: 1px red solid; */
+    height: 20px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.login_Page form button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: large;
+    background: #0088cc;
+    /*border: 0 #0088cc solid;*/
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login_Page form button:hover{
+    border: 2px #025883 solid;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////List PopUp Menu/////////////////////////////////////////////////////*/
+
+/*Arrow popOut for User List  */
+.up_arrow{
+    border: 1px black solid;
+    margin: 5px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.up_arrow img{
+	border-radius: 50%;
+}
+.arrow_direction{
+    transform: rotate(180deg);
+    background: transparent;
+}
+
+/*email text style*/
+.email{
+	color:grey;
+	overflow:hidden;
+}
+
+/*User/Admin name Style*/
+.name{
+	/*border:1px red solid;*/
+	color:black;
+	overflow:hidden;
+}
+
+/* Pop Menu  */
+.popUpMenu{
+    /*border: 1px black solid;*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top:-200px;
+    background: #ffffff;
+    z-index:1;
+    visibility:hidden;
+    transition: all 0.3s ease-in-out;
+    overflow:hidden;
+}
+
+.ShowPopUpMenu{
+    top: 100px;
+    visibility: visible;
+}
+
+.popUpMenu li{
+    border-bottom: 1px rgb(140, 140, 140) solid;
+    width: 200px;
+    height:30px;
+    min-height: 30px;
+    margin:0;
+    list-style: none;
+}
+
+.popUpMenu li:hover{
+	background-color: rgb(255, 196, 0);
+}
+
+.popUpMenu li a{
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+}
+
+.logoutBtn{
+	/*width: 190px;*/
+	width: 100%;
+	height:100%;
+	background: red;
+	cursor: pointer;	
+}
+
+.logoutBtn a{
+	text-decoration: none;
+	color: black;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////All Product/////////////////////////////////////////////////////*/
+
+#ElementContainer{
+    /* border: 1px red solid; */
+    padding: 5px;
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.ProductItem{
+    /*border: 1px green solid;*/
+    width: 80%;
+    height:auto;
+}
+
+    /*////////////////////////////////////////Side Bar/////////////////////////////////////////////////////////*/
+
+.sideBar{
+    /*border:1px black solid;*/
+    width: 20%;
+    height:132.5vh;
+    margin-right: 5px;
+    background:#ffffff;
+    padding:5px;
+    overflow: auto;
+}
+
+.ShowProduct{
+    /*border:1px black solid;*/
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition: all 0.3s ease-in-out;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.ShowProduct:hover{
+    transform: scale(1.02);
+}
+
+.ShowProduct img{
+    /*border:1px red solid;*/ 
+    width: 50%;
+    min-height: 100px;
+    
+}
+
+.ShowProduct p{
+    /* border:1px red solid; */
+    width:50%;
+    font-weight: 500;
+    color:black;
+    font-style: oblique;
+    display: inline-block;
+    white-space: nowrap;
+    padding:5px; 
+    overflow: hidden !important;
+    text-overflow:ellipsis;
+}
+
+.ShowProduct p:hover{
+    color:rgb(0, 204, 211);
+}
+
+    /*/////////////////Category section///////////////////////////////////////////////*/
+.CategoryContainer{
+    /* border: 1px rgb(0, 0, 0) solid; */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+.CategoryHead2{
+    /* border: 1px black solid; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.Category{
+    /* border: 1px black solid; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.CategoryHead4{
+    /* border: 1px green solid; */
+    width: 100%;
+    height: 30%;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CategoryHead4 h4{
+    /* border: 1px green solid; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FormField{
+    /* border: 1px green solid; */
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.InputField{
+    border: 1px rgb(0, 0, 0) solid;
+    width: 60%;
+    height: 80%;
+    margin-left: 20px;
+    padding: 3px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #e9e9e9;
+}
+
+.InputField input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #e9e9e9;
+}
+
+.FormField button{
+    width: 20%;
+    height: 80%;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.SelectField{
+    border: 1px rgb(0, 0, 0) solid;
+    width: 60%;
+    height: 80%;
+    margin-left: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.SelectField select{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none; 
+    background: #e9e9e9; 
+}
+
+.Backgroundcolor1{
+    background: #6CC551;
+    border: 2px rgb(6, 77, 6) solid;
+}
+
+.Backgroundcolor1:hover{
+	background: #abff91;
+}
+
+.Backgroundcolor2{
+    background: #F25F5C;
+    border: 2px rgb(114, 14, 14) solid;
+}
+
+.Backgroundcolor2:hover{
+	background: #fa9290;
+}
+
+
+    /*/////////////////Product Add Into DB///////////////////////////////////////////////*/
+
+.AddProductContainer{
+    /* border: 1px red solid; */
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff ;
+   	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+
+.ProductHead{
+    border-bottom: 2px orange solid;
+    width: 100%;
+    padding:5px;
+    display: flex; 
+    align-items: center;
+}
+
+.AddProduct{
+    /* border: 1px green solid;  */
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    
+}
+
+.ProductInput{
+    /* border: 1px orangered solid; */
+    width: 100%;
+    margin-top: 5px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.ProductInput span{
+    /*border: 1px orange solid;*/
+    width:20%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding-left: 10px;
+}
+
+.inputs{
+	border:1px red solid;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 75%;
+    height: 30px;
+    margin-left:10px;
+    margin-bottom:10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #e9e9e9;
+}
+
+.inputs input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #e9e9e9;
+}
+
+.inputs textarea{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #e9e9e9;
+}
+
+.inputs select{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #e9e9e9;
+}
+
+.importImage{
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    position: relative;
+    bottom: 6px;
+}
+
+.ProductBtn{
+     border: 2px rgb(12, 53, 70) solid;
+     width: 10%;
+     height: 30px;
+     margin:auto;
+     border-radius: 5px;
+     background: rgb(28, 154, 204);
+     overflow: hidden;
+}
+
+.ProductBtn:hover{
+	background: rgb(86, 198, 241);
+}
+
+.ProductBtn button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.background3{
+    background: rgb(150, 235, 150);
+}
+
+    /*/////////////////////////////////////////////About Product///////////////////*/
+
+.ProductDetail{
+    /* border:1px red solid; */
+    width:100%;
+    height: auto;
+    display: flex;
+    margin-top: 15px;
+}
+
+.LeftItem{
+    /* border:1px red solid; */
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #08be4e;
+}
+
+.LeftItem img{
+    /* border:1px red solid; */
+    width:90%; 
+    border-radius: 50%;
+}
+
+.RightItem{
+    /* border:1px red solid; */
+    width: 60%;
+    background: #22362a;
+    padding: 4px;
+}
+
+.InfoStyle{
+    border:1px black solid; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.PName{
+    min-height: 40px;
+}
+
+.PPrice{
+    height: 30px;
+}
+
+.PCompany{
+    height:20px;
+}
+
+.PCategory{
+    min-height:20px;
+}
+
+.PInfo{
+    height:50px;
+}
+
+.PQuantity{
+    height:20px;
+}
+
+/*////////////////////////////////////////////////////////////////*/
+
+    /*/////////////////////////////////////////////Css for most Selling Product///////////////////*/
+
+.MSProductContainer{
+    /* border: 1px black solid;  */
+    width: 100%;
+    margin-top:30px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.MSProductContainer h3{
+    border-bottom:1px orange solid;
+	width:100%;
+	height:50px;
+	display:flex;
+	align-items:center;
+	padding:5px;
+	font-weight:600;
+	font-size:28px;
+}
+
+.MSProduct{
+    /* border:1px orange solid; */
+    display: flex;
+    width: 100%;
+    padding: 10px; 
+}
+
+.MSProduct{
+    /*border:1px orange solid;*/
+    display: flex;
+    width: 100%;
+    padding: 10px; 
+}
+
+.box{
+   /* border: 1px rgb(0, 0, 0) solid;*/ 
+    width: 100%;
+}
+
+.MSProductform{
+    /*border: 1px rgb(0, 0, 0) solid;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.message{
+    /*border: 1px rgb(0, 0, 0) solid;*/
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(21, 255, 0);
+}
+
+.MSInput {
+    border: 1px #400040 solid;
+    width: 100%;
+    height: 50px;
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+.MSInput input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: larger;
+}
+
+.MSBtn{
+    border: 1px rgb(21, 138, 184) solid;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.MSBtn button{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(21, 138, 184);
+    border: none;
+    outline: none;
+}
+
+.MSBtn button:hover{
+	background: rgb(86, 198, 241);
+}
+
+
+/*/////////////////////////////////////////Add On CSS////////////////////////////////////////////////////////*/
+
+/* Element Alignment */
+.align_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Style */
+.text1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+/* Element In Row */
+.row{
+    display: flex;
+}
+
+/*Element Separator*/
+.separator{
+    border:2px red solid;
+    height: 80px;
+    width:100%;
+    z-index:0;
+}
+
+.floatRight{
+    float:right;
+    right: 10px;
+}
+
+.floatLeft{
+    float: left;
+    left: 10px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////Footer CSS//////////////////////////////////////////////////////////*/
+/*Footer element*/
+.footer_container{
+    /* border: 1px black solid; */
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #212121;
+}
+.get_in_touch_container{
+    border: 2px #02742e solid;
+    width: 100px;
+    height: 40px;
+    background-color:#08be4e ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+

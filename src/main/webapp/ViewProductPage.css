@@ -1,0 +1,492 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	background-color: #ffffff;
+}
+
+
+
+.uu{
+    height:1000px
+}
+/*///////////////////////////////////////Navigation CSS//////////////////////////////////////////////////////////*/
+/* Main Navigation block */
+.nav_main_container{
+	width:100%;
+	height:auto;
+	position:fixed;
+	z-index:2;
+}
+
+/*Contain header message for user*/
+.msg{
+	/*position:fixed;*/
+    width: 100%;
+    height: auto;
+    background-color:#FFCC00;
+    color: red;
+    z-index:2;
+}
+
+/*Contain all navigation bar element*/
+.nav_Container{
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px red solid; */
+    position:fixed;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    /* background-color: transparent; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index:2;
+}
+
+/*Contain Main logo */
+.main_logo{
+    /* border:2px red solid; */
+    position:relative;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;  
+    height: 80px;
+    /* overflow: hidden; */
+}
+.main_logo img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+/*Static navigation list*/
+.nav_list_container{
+    /* border:2px yellow solid;  */
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.nav_list{
+    box-sizing: border-box;
+    /* border:2px red solid; */
+    right: 110px; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    list-style: none;
+    width: 90%;
+    height: 80px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Contain burger option for navigation bar list*/
+.ham_burger{
+    box-sizing: border-box;
+    /* border:1px black solid; */
+    width:10%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layer{
+    /* border:1px black solid; */
+    width: 40px;
+    height:6px;
+    margin: 2px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.nav_list li{
+    padding: 5px;
+    margin:2px;
+    /* border: 1px black solid; */
+    width: auto;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_list li:hover{
+    transform: scale(1.1);
+}
+
+.nav_list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_list li a:hover{
+    color:rgb(18, 158, 111);
+}
+
+/*Contain all search box elements*/
+.search_container{
+    /* border:2px red solid; */
+    box-sizing: border-box;
+    width: 25%; 
+    height: 80px; 
+    background-color: #ffffff; 
+}
+.search_box{
+    box-sizing: border-box;
+    border: 1px rgb(73, 68, 68) solid;
+    border-radius: 10px;
+    width: 90%; 
+    height: 45px;
+}
+.search_box input{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #ffffff;
+
+}
+.search_box button{
+    margin: 5px;
+    width: 9%;
+    height: 80%;
+    border-radius: 50%;
+    border: 0;
+    background-color: transparent;;
+}
+
+/*Contain User profile,logout button and signIn/signUp element */
+.User_Container{
+    box-sizing: border-box;
+    /*border: 1px red solid;*/
+    width: 15%;
+    height: 80px;
+}
+/*Profile image*/
+.avatar{
+    display: flex;
+    /*border: 1px red solid;*/
+    width: 50px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////Login PopUp Pages CSS//////////////////////////////////////////////////////////*/
+/*Login Page*/
+.login_Page{
+    margin-left: 35%;
+    padding: 10px;
+    position: fixed;
+    top:-260px;
+    width: 400px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    z-index: 4;
+}
+.show_login_Page{
+    top:100px;
+    display: block;
+}
+
+.login_Page form{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_Page form h2{
+    margin: auto;
+}
+
+.input_field{
+    border: 1px black solid;
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input_field input{
+    width: 280px;
+    height: 35px;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+.check_field{
+    /* border: 1px red solid; */
+    height: 20px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.login_Page form button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: large;
+    background: #0088cc;
+    border: 0 #0088cc solid;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login_Page form button:hover{
+    border: 2px #025883 solid;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////List PopUp Menu/////////////////////////////////////////////////////*/
+
+/*Arrow popOut for User List  */
+.up_arrow{
+    border: 1px black solid;
+    margin: 5px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+}
+.arrow_direction{
+    transform: rotate(180deg);
+}
+
+/*email text style*/
+.email{
+	color:grey;
+	overflow:hidden;
+}
+
+/*User/Admin name Style*/
+.name{
+	/*border:1px red solid;*/
+	color:black;
+	overflow:hidden;
+}
+
+/* Pop Menu  */
+.popUpMenu{
+    /*border: 1px black solid;*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 200px;
+    height: auto;
+    position: relative;
+    top:-200px;
+    background: #ffffff;
+    z-index:1;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.ShowPopUpMenu{
+    top: 100px;
+    visibility: visible;
+}
+
+
+.popUpMenu li{
+    border-bottom: 1px grey solid;
+    width: 200px;
+    height:30px;
+    min-height: 30px;
+    margin: 5px;
+    list-style: none;
+}
+
+.logoutBtn{
+	width: 100%;
+    height:100%;
+	background: red;
+	cursor: pointer;	
+}
+
+.logoutBtn a{
+	text-decoration: none;
+	color: black;
+}
+
+/*///////////////////////////////////////Show Product Container CSS//////////////////////////////////////////////////////////*/
+
+.ShowProductContainer{
+	border: 1px black solid;
+	width:100%;
+	height:auto;
+	margin:auto;
+	padding:10px;
+	position:absolute;
+	top:100px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.ShowProduct{
+	/* border: 1px red solid; */
+	width:100%;
+	height:auto;
+	margin-top:20px;
+	padding:10px;
+	display:flex;
+	align-items:center;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.imgBox{
+	/* border: 1px green solid; */
+	border-radius:10px;
+	width:50%;
+	display:flex;
+	align-items:center;
+    justify-content: center;
+}
+
+.imgBox img{
+	border: 1px black solid;
+	border-radius:10px;
+	width:400px;
+	height:350px;
+	margin:5px;
+	padding:2px;
+}
+
+.imgInfo{
+	/* border: 1px blue solid; */
+	border-radius:10px;
+	width:50%;
+    height: 460px;
+	display:flex;
+    flex-direction: column;
+	align-items:center;
+    justify-content:space-around;
+    box-sizing: border-box;
+}
+
+.infoBox{
+	/* border: 1px yellow solid; */
+    padding: 5px;
+    width: 90%;
+}
+
+.infoBox span{
+	/* border: 1px yellow solid; */
+	height:20px;
+    color: grey;
+}
+
+.infoBox p{
+	border-bottom: 1px orange solid;
+	width:100%;
+	min-height:35px;
+    padding: 5px;    
+}
+
+.info{
+	overflow:auto;
+	height:80px;
+}
+
+.imgInfo a{
+	/* border: 1px black solid; */
+	width:60px;
+	margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    background-color: rgb(255, 73, 73);
+}
+
+.imgInfo a:hover{
+    background-color: rgb(255, 12, 12);
+    transform: scale(1.05);
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////Footer CSS//////////////////////////////////////////////////////////*/
+/*Footer element*/
+.footer_container{
+    /* border: 1px black solid; */
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #212121;
+}
+.get_in_touch_container{
+    border: 2px #02742e solid;
+    width: 100px;
+    height: 40px;
+    background-color:#08be4e ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////Add On CSS////////////////////////////////////////////////////////*/
+
+/* Element Alignment */
+.align_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Style */
+.text1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+/* Element In Row */
+.row{
+    display: flex;
+}
+
+/*Element Separator*/
+.separator{
+    border:2px red solid;
+    height: 80px;
+    width:100%;
+    z-index:0;
+}
+
+.floatRight{
+    float:right;
+    right: 10px;
+}
+
+.floatLeft{
+    float: left;
+    left: 10px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+

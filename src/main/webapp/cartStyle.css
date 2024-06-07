@@ -1,0 +1,562 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.uu{
+    height:1000px
+}
+/*///////////////////////////////////////Navigation CSS//////////////////////////////////////////////////////////*/
+/* Main Navigation block */
+.nav_main_container{
+	/* border: 2px red solid;  */
+	width:100%;
+	height:auto;
+	position:fixed;
+    top: 0;
+	z-index:2;
+}
+
+/*Contain header message for user*/
+.msg{
+	/*position:fixed;*/
+    width: 100%;
+    height: auto;
+    background-color:#FFCC00;
+    color: red;
+    z-index:2;
+}
+
+/*Contain all navigation bar element*/
+.nav_Container{
+    padding: 0;
+    /*border: 2px red solid;*/
+    position:absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    /* background-color: transparent; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*Contain Main logo */
+.main_logo{
+    /* border:2px red solid; */
+    position:relative;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;  
+    height: 80px;
+    /* overflow: hidden; */
+}
+.main_logo img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+/*Static navigation list*/
+.nav_list_container{
+    /* border:2px yellow solid;  */
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.nav_list{
+    box-sizing: border-box;
+    /* border:2px red solid; */
+    right: 110px; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    list-style: none;
+    width: 90%;
+    height: 80px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Contain burger option for navigation bar list*/
+.ham_burger{
+    box-sizing: border-box;
+    /* border:1px black solid; */
+    width:10%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layer{
+    /* border:1px black solid; */
+    width: 40px;
+    height:6px;
+    margin: 2px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.nav_list li{
+    padding: 5px;
+    margin:2px;
+    /* border: 1px black solid; */
+    width: auto;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_list li:hover{
+    transform: scale(1.1);
+}
+
+.nav_list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_list li a:hover{
+    color:rgb(18, 158, 111);
+}
+
+/*Contain all search box elements*/
+.search_container{
+    /* border:2px red solid; */
+    box-sizing: border-box;
+    width: 25%; 
+    height: 80px;  
+}
+.search_box{
+    box-sizing: border-box;
+    border: 1px rgb(73, 68, 68) solid;
+    border-radius: 10px;
+    width: 90%; 
+    height: 45px;
+}
+.search_box input{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #ffffff;
+
+}
+.search_box button{
+    margin: 5px;
+    width: 9%;
+    height: 80%;
+    border-radius: 50%;
+    border: 0;
+    background-color: transparent;;
+}
+
+/*Contain User profile,logout button and signIn/signUp element */
+.User_Container{
+    box-sizing: border-box;
+    /*border: 1px red solid;*/
+    width: 15%;
+    height: 80px;
+}
+
+.User_Container button{
+	background-color: transparent; 
+}
+/*Profile image*/
+.avatar{
+    display: flex;
+    /*border: 1px red solid;*/
+    width: 50px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////Login PopUp Pages CSS//////////////////////////////////////////////////////////*/
+/*Login Page*/
+.login_Page{
+    margin-left: 35%;
+    padding: 10px;
+    position: fixed;
+    top:-260px;
+    width: 400px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    z-index: 4;
+}
+.show_login_Page{
+    top:100px;
+    display: block;
+}
+
+.login_Page form{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_Page form h2{
+    margin: auto;
+}
+
+.input_field{
+    border: 1px black solid;
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input_field input{
+    width: 280px;
+    height: 35px;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+.check_field{
+    /* border: 1px red solid; */
+    height: 20px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.login_Page form button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: large;
+    background: #0088cc;
+    border: 0 #0088cc solid;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login_Page form button:hover{
+    border: 2px #025883 solid;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////List PopUp Menu/////////////////////////////////////////////////////*/
+
+/*Arrow popOut for User List  */
+.up_arrow{
+    border: 1px black solid;
+    margin: 5px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+}
+.arrow_direction{
+    transform: rotate(180deg);
+}
+
+/*email text style*/
+.email{
+	color:grey;
+	overflow:hidden;
+}
+
+/*User/Admin name Style*/
+.name{
+	/*border:1px red solid;*/
+	color:black;
+	overflow:hidden;
+}
+
+/* Pop Menu  */
+.popUpMenu{
+    /*border: 1px black solid;*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top:-200px;
+    background: #ffffff;
+    z-index: 1;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.ShowPopUpMenu{
+    top: 100px;
+    visibility: visible;
+}
+
+
+.popUpMenu li{
+    border-bottom: 1px rgb(140, 140, 140) solid;
+    width: 200px;
+    height:30px;
+    min-height: 30px;
+    list-style: none;
+    overflow:hidden;
+}
+
+.popUpMenu li:hover{
+	background-color: rgb(255, 196, 0);
+}
+
+.popUpMenu li a{
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+}
+
+.logoutBtn{
+	background: red;
+	cursor: pointer;	
+}
+
+.logoutBtn a{
+	text-decoration: none;
+	color: black;
+}
+
+/*///////////////////////////////////////Show Product Container CSS//////////////////////////////////////////////////////////*/
+
+
+.ShowProductContainer{
+	/* border: 1px black solid; */
+	width:100%;
+	min-height:100vh;
+	margin-top:20px;
+	padding:10px;
+	display: flex;
+    flex-direction: column;
+}
+
+.ShowProductContainer h2{
+    border-bottom: 2px orange solid;
+    padding: 10px;
+}
+
+.cartMsg{
+    /* border: 1px brown solid; */
+    width: 80vw;
+    height:80vh;
+    margin: auto;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartMsg p{
+    /* border: 1px brown solid; */
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: red;
+    font-size: 50px;
+    background-color: antiquewhite;
+}
+
+.cartMsg img{
+    /* border: 1px black solid; */
+    width: 450px;
+}
+
+.ShowProduct{
+	/* border: 1px red solid; */
+	width:100%;
+	height:100%;
+	margin-top:20px;
+	padding:10px;
+}
+
+.ProductBox{
+    /* border: 1px green solid; */
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.ProductBox div{
+    /* border: 1px brown solid; */
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} 
+
+.ProductBox div span{
+    background-color: orange;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+} 
+
+.ProductBox img{
+	/* border: 1px green solid; */
+	width:200px;
+	padding:2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.ProductBox img:hover{
+    transform: scale(1.05);
+}
+
+.imglink{
+    width:200px; 
+	margin:5px;
+    background-color:#ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow:hidden;
+}
+
+.removebtn{
+    /* border: 1px black solid; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    background-color: rgb(0, 179, 185);
+}
+
+.removebtn:hover{
+    background-color: rgb(0, 209, 216);
+}
+
+
+.cartTotalPrice{
+    /* border: 1px green solid; */
+    width: 100%;
+    position:fixed;
+    top: 91.3vh;
+    padding: 10px;
+    background-color:rgb(255, 166, 0);
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.cartTotalPrice p{
+    /* border: 1px red solid; */
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 22px;
+    background-color: rgb(255, 136, 0);
+}
+
+.cartTotalPrice a{
+    border:0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(25, 177, 25);
+    transition: all 0.2s ease-in-out;
+}
+
+.cartTotalPrice a:hover{
+    background-color: rgb(0, 230, 0);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////Footer CSS//////////////////////////////////////////////////////////*/
+/*Footer element*/
+.footer_container{
+    /* border: 1px black solid; */
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #212121;
+}
+.get_in_touch_container{
+    border: 2px #02742e solid;
+    width: 100px;
+    height: 40px;
+    background-color:#08be4e ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////Add On CSS////////////////////////////////////////////////////////*/
+
+/* Element Alignment */
+.align_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Style */
+.text1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+/* Element In Row */
+.row{
+    display: flex;
+}
+
+/*Element Separator*/
+.separator{
+    border:2px red solid;
+    height: 80px;
+    width:100%;
+    z-index:0;
+}
+
+.floatRight{
+    float:right;
+    right: 10px;
+}
+
+.floatLeft{
+    float: left;
+    left: 10px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+

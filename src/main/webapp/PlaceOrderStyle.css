@@ -1,0 +1,769 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.uu{
+    height:1000px
+}
+/*///////////////////////////////////////Navigation CSS//////////////////////////////////////////////////////////*/
+/* Main Navigation block */
+.nav_main_container{
+	/* border: 2px red solid;  */
+	width:100%;
+	height:auto;
+	position:fixed;
+    top: 0;
+	z-index:2;
+}
+
+/*Contain header message for user*/
+.msg{
+	/*position:fixed;*/
+    width: 100%;
+    height: auto;
+    background-color:#FFCC00;
+    color: red;
+    z-index:2;
+}
+
+/*Contain all navigation bar element*/
+.nav_Container{
+    padding: 0;
+    /*border: 2px red solid;*/
+    position:absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    /* background-color: transparent; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*Contain Main logo */
+.main_logo{
+    /* border:2px red solid; */
+    position:relative;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;  
+    height: 80px;
+    /* overflow: hidden; */
+}
+.main_logo img{
+    width: 70px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+/*Static navigation list*/
+.nav_list_container{
+    /* border:2px yellow solid;  */
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.nav_list{
+    box-sizing: border-box;
+    /* border:2px red solid; */
+    right: 110px; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    list-style: none;
+    width: 90%;
+    height: 80px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Contain burger option for navigation bar list*/
+.ham_burger{
+    box-sizing: border-box;
+    /* border:1px black solid; */
+    width:10%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layer{
+    /* border:1px black solid; */
+    width: 40px;
+    height:6px;
+    margin: 2px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.nav_list li{
+    padding: 5px;
+    margin:2px;
+    /* border: 1px black solid; */
+    width: auto;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_list li:hover{
+    transform: scale(1.1);
+}
+
+.nav_list li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_list li a:hover{
+    color:rgb(18, 158, 111);
+}
+
+/*Contain all search box elements*/
+
+/*Contain User profile,logout button and signIn/signUp element */
+.User_Container{
+    box-sizing: border-box;
+    /*border: 1px red solid;*/
+    width: 15%;
+    height: 80px;
+}
+
+.User_Container button{
+	background-color: transparent; 
+}
+/*Profile image*/
+.avatar{
+    display: flex;
+    /*border: 1px red solid;*/
+    width: 50px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////Login PopUp Pages CSS//////////////////////////////////////////////////////////*/
+/*Login Page*/
+.login_Page{
+    margin-left: 35%;
+    padding: 10px;
+    position: fixed;
+    top:-260px;
+    width: 400px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    z-index: 4;
+}
+.show_login_Page{
+    top:100px;
+    display: block;
+}
+
+.login_Page form{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_Page form h2{
+    margin: auto;
+}
+
+.input_field{
+    border: 1px black solid;
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input_field input{
+    width: 280px;
+    height: 35px;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+.check_field{
+    /* border: 1px red solid; */
+    height: 20px;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.login_Page form button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: large;
+    background: #0088cc;
+    border: 0 #0088cc solid;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login_Page form button:hover{
+    border: 2px #025883 solid;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////List PopUp Menu/////////////////////////////////////////////////////*/
+
+/*Arrow popOut for User List  */
+.up_arrow{
+    border: 1px black solid;
+    margin: 5px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+}
+.arrow_direction{
+    transform: rotate(180deg);
+}
+
+/*email text style*/
+.email{
+	color:grey;
+	overflow:hidden;
+}
+
+/*User/Admin name Style*/
+.name{
+	/*border:1px red solid;*/
+	color:black;
+	overflow:hidden;
+}
+
+/* Pop Menu  */
+.popUpMenu{
+    /*border: 1px black solid;*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top:-200px;
+    background: #ffffff;
+    z-index: 1;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.ShowPopUpMenu{
+    top: 100px;
+    visibility: visible;
+}
+
+
+.popUpMenu li{
+    border-bottom: 1px rgb(140, 140, 140) solid;
+    width: 200px;
+    height:30px;
+    min-height: 30px;
+    list-style: none;
+    overflow:hidden;
+}
+
+.popUpMenu li:hover{
+	background-color: rgb(255, 196, 0);
+}
+
+.popUpMenu li a{
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+}
+
+.logoutBtn{
+	background: red;
+	cursor: pointer;	
+}
+
+.logoutBtn a{
+	text-decoration: none;
+	color: black;
+}
+
+/*///////////////////////////////Order Place css ///////////////////////////////////////////*/
+.mainContainer{
+    /* border: 1px red solid; */
+    width: 100%;
+    height: 100vh;
+    margin-top:100px;
+}
+
+.mainContainer h2{
+    border-bottom: 2px orange solid;
+    width: 98%;
+    height: 8%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+}
+.orderBox{
+    /* border: 1px black solid; */
+    width: 100%;
+    height: 92%;
+    display: flex;
+}
+
+.leftPart{
+    /* border: 1px black solid; */
+    width: 80%;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.leftPart h1{
+    border-bottom: 2px orange solid;
+    width: 95%;
+    padding-left: 10px;
+}
+
+.category a{
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+}
+
+.category a:hover{
+    color: rgb(7, 165, 165);
+}
+
+.userInfo{
+    /* border: 1px brown solid; */
+    border-radius: 4px;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.userInfo hr{
+    width: 98%;
+    margin: auto;
+}
+
+.subinfo{
+    /* border: 1px black solid; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sub{
+    /* border: 1px brown solid; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sub span{
+    color: rgb(138, 137, 137);
+}
+
+.sub p{
+    color: rgb(7, 165, 165);
+}
+
+.NewAddressBtn{
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(7, 165, 165);
+    background-color: rgb(228, 226, 226);
+    text-align: center;
+    transform: translateX(-100px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.NewAddressBtnSlide{
+    transform: translateX(0);
+}
+
+.NewAddressBtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    color: orange;
+}
+
+/* //////////////Address button//////////////////////// */
+.addressInput{
+    /* border: 1px orange solid; */
+    min-width:100px;
+    display: flex;
+    gap: 10px;
+}
+.addressInput div{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.AddressForm{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: translateX(250px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.AddressFormVisible{
+    transform: translateX(0);
+}
+
+.AddressForm input{
+    width: 170px;
+    height: 20px;
+    margin: 2px;
+    color: gray;
+    border-radius: 2px;
+    padding: 4px;
+    outline: none;
+    border: 1px rgb(182, 182, 182) solid;
+}
+
+.AddressForm button{
+    width: 50px;
+    height: 20px;
+    border: 0;
+    border-radius: 2px;
+    margin: 2px;
+    background-color: orangered;
+}
+/* ////////////////////////////////////// */
+
+.changebtn{
+    /* border: 1px brown solid; */
+    width: 10%;
+    height: 30px;
+}
+
+.changebtn button{
+    border: 0px red solid;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;;
+}
+
+.changebtn button:hover{
+    color: rgb(255, 145, 0);
+}
+
+/* ///////////////////////////////////////////////// */
+/* select Addresses */
+.selectSection{
+    /* border: 1px red solid; */
+    padding: 5px;
+    position: relative;
+    top:0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    display: none;
+}
+
+.selectSectionVisible{
+    display: block;
+    height: auto;
+}
+
+.selectform{
+    /* border: 1px black solid; */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.selectform div{
+    /* border: 1px green solid; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.selectform button{
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    outline: none;
+    background-color: rgb(236, 163, 27);
+}
+
+.selectform button:hover{
+    box-shadow: rgba(192, 113, 9, 0.4) 0px 0px 0px 2px, rgba(138, 78, 11, 0.65) 0px 4px 6px -1px, rgba(177, 64, 64, 0.08) 0px 1px 0px inset;
+}
+/* ///////////////////////////////////////////////// */
+
+.PaymentContainer{
+    /* border: 1px black solid; */
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+}
+
+.paymentHead{
+    /* border: 1px red solid;  */
+    border-radius: 5px;
+    width: 100%;
+    display: flex;  
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.payText{
+    /* border: 1px brown solid;  */
+    width: 80%;
+}
+.payType{
+    /* border: 1px green solid; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payType img{
+    border: 1px black dotted;
+    border-radius: 30px;
+    padding: 10px;
+    width: 50px;
+}
+
+.paylistbox{
+    /* border: 1px black solid; */
+    overflow: hidden;
+}
+
+.target{
+    /* border: 1px rgb(183, 0, 255) solid; */
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    transform: translateY(-110px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.PaymentContainer:hover .target{
+    transform: translateY(0);
+}
+
+.list{
+    /* border: 1px rgb(255, 0, 55) solid; */
+    border-radius: 20px;
+    padding: 5px;
+    list-style: none;
+    width: 8%;
+    height: 80px;
+    margin: 5px;
+    /* transform: translateY(-110px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+}
+
+.list:hover{
+    background-color: rgb(255, 200, 127);
+}
+
+
+
+.list a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list a img{
+    width: 50px;
+}
+
+.bottomsection{
+    /* border: 1px black solid; */
+    width: 76%;
+    min-height:80px ;
+    margin-top: 30px;
+    padding: 20px;
+    position: fixed;
+    top: 84vh;
+    background-color: rgb(181, 255, 181);
+    display: flex;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.bottomleft{
+    /* border: 1px rgb(255, 238, 6) solid;  */
+    width: 50%;
+}
+
+.bottomright{
+    /* border: 1px rgb(38, 0, 255) solid;  */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomright a{
+    /*border:1px red solid;*/
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: rgb(255, 81, 0);
+}
+
+.bottomright a:hover{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.rightPart{
+    /* border: 1px black solid; */
+    border-radius: 10px;
+    width: 20%;
+    margin: 5px;
+    background-color: rgb(255, 235, 198);
+}
+
+.orderlist{
+    /* border: 1px black solid; */
+    width: 100%;
+}
+
+.orderlist hr{
+    width: 98%;
+    margin: auto;
+}
+
+.orderlist li{
+    border: 1px bla/ck solid;
+    list-style: none;
+    width: 100%;
+}
+
+.amountlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.productlist a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productlist a img{
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+.productlist a span{
+    border: 1px black solid;
+    width: 50%;
+    overflow: hidden;
+    margin: 5px;
+}
+/*///////////////////////////////////////Footer CSS//////////////////////////////////////////////////////////*/
+/*Footer element*/
+.footer_container{
+    /* border: 1px black solid; */
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #212121;
+}
+.get_in_touch_container{
+    border: 2px #02742e solid;
+    width: 100px;
+    height: 40px;
+    background-color:#08be4e ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////Add On CSS////////////////////////////////////////////////////////*/
+
+/* Element Alignment */
+.align_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Style */
+.text1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+/* Element In Row */
+.row{
+    display: flex;
+}
+
+/*Element Separator*/
+.separator{
+    border:2px red solid;
+    height: 80px;
+    width:100%;
+    z-index:0;
+}
+
+.floatRight{
+    float:right;
+    right: 10px;
+}
+
+.floatLeft{
+    float: left;
+    left: 10px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
